@@ -7,6 +7,7 @@
   <title>laravel-base-crud</title>
 </head>
 <body>
+  <a href="{{route('comics.index')}}">comics</a>
 
   @yield('content')
 

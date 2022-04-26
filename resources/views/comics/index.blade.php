@@ -1,4 +1,4 @@
-@extends('layout.app');
+@extends('layout.app')
 
 @section('content')
   <table>
@@ -7,13 +7,14 @@
     <th>Collezione</th>
     <th>Data di vendita</th>
     <th>tipo</th>
-    @foreach($comics as $el)
+    @foreach($comics as $comic)
       <tr>
-        <td> {{$el['title']}} </td>
-        <td> {{$el['price']}} </td>
-        <td> {{$el['series']}} </td>
-        <td> {{$el['sale_date']}} </td>
-        <td> {{$el['type']}} </td>
+        <td> {{$comic['title']}} </td>
+        <td> {{$comic['price']}} </td>
+        <td> {{$comic['series']}} </td>
+        <td> {{$comic['sale_date']}} </td>
+        <td> {{$comic['type']}} </td>
+        <td> <a href="{{route('comics.show', $comic->id)}}">Visualizza</a> </td>
       </tr>
     @endforeach
   </table>
