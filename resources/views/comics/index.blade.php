@@ -17,11 +17,11 @@
         <td> <a href="{{route('comics.show', $comic->id)}}">Visualizza</a> </td>
         <td> <a href="{{route('comics.edit', $comic->id)}}">Modifica</a> </td>
         <td>
-          <form action="{{route('comics.destroy', $comic)}}" methtod='POST'>
+          <form action="{{route('comics.destroy', $comic->id)}}" method='POST'>
               @csrf
               @method('DELETE')
               <button type='submit'>
-                  Elimina
+                  Delete
               </button>
           </form>
         </td>
