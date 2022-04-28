@@ -14,17 +14,17 @@
     @foreach($comics as $comic)
       <tr class="">
         <td class="px-2 border"> {{$comic['title']}} </td>
-        <td class="px-2 border"> {{$comic['price']}} </td>
+        <td class="px-2 border">$ {{$comic['price']}} </td>
         <td class="px-2 border"> {{$comic['series']}} </td>
         <td class="px-2 border"> {{$comic['sale_date']}} </td>
         <td class="px-2 border"> {{$comic['type']}} </td>
-        <td class="px-2 border"> <a href="{{route('comics.show', $comic->id)}}">Visualizza</a> </td>
-        <td class="px-2 border"> <a href="{{route('comics.edit', $comic->id)}}">Modifica</a> </td>
+        <td class="px-2 border"> <a href="{{route('comics.show', $comic->id)}}">View</a> </td>
+        <td class="px-2 border"> <a href="{{route('comics.edit', $comic->id)}}">Edit</a> </td>
         <td class="px-2 border">
           <form action="{{route('comics.destroy', $comic->id)}}" method='POST'>
               @csrf
               @method('DELETE')
-              <button type='submit' class="rounded btn-dark">
+              <button type='submit' onclick="return confirm('Are you sure?')" class="rounded btn-dark">
                   Delete
               </button>
           </form>
