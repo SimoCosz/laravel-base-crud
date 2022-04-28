@@ -20,9 +20,8 @@
       <label class="m-0 form-lable" for="type">Tipo:</label>
       <select class="form-control" name="type" id="type">
         <option value="">Selecte type</option>
-        <option value="book">Comic Book</option>
-        <option value="novel">Graphic Novel</option>
-        <option value="longbook">Long Book</option>
+        <option value="book" {{ old('type') == 'book'? 'selected' : '' }}>Comic Book</option>
+        <option value="novel" {{ old('type') == 'novel'? 'selected' : '' }}>Graphic Novel</option>
       </select>
       @error('type')
           <div class="alert alert-danger"> {{$message}} </div>
@@ -68,15 +67,6 @@
     </button>
   </form>
 
-  @if($errors->any())
-  <div class="alert alert-danger">
-    <ul>
-      @foreach($errors->all() as $error)
-        <li> {{$error}} </li>
-      @endforeach
-    </ul>
-  </div>
-  @endif
 </div>
 
 @endsection

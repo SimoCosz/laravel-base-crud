@@ -25,8 +25,8 @@
           <label class="m-0" for="type">Tipo:</label>
           <select name="type" id="type">
             <option value="">Seleziona il tipo</option>
-            <option value="book"  {{$comic->type == 'book'? 'selected' : ''}}>Comic Book</option>
-            <option value="novel" {{$comic->type == 'novel'? 'selected' : ''}}>Graphic Novel</option>
+            <option value="book"  {{old('type') == 'book'? 'selected' : '' }}>Comic Book</option>
+            <option value="novel" {{old('type') == 'novel'? 'selected' : ''}}>Graphic Novel</option>
           </select>
           @error('type')
             <div class="alert alert-danger"> {{$message}} </div>
