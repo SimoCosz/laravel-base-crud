@@ -2,14 +2,14 @@
 
 @section('content')
 <div class="container">
-  <h2>Modifica Comic</h2>
+  <h2 class="title">Modifica Comic</h2>
 </div>
 <div class="container d-flex">
   <div>
     <img src="{{$comic->thumb}}" alt="">
   </div>
   <div class="container">
-    <form action="{{route('comics.update', $comic->id)}}" method="POST">
+    <form class="edit-form" action="{{route('comics.update', $comic->id)}}" method="POST">
       @csrf
       @method('PUT')
 
@@ -72,7 +72,7 @@
         </textarea>
       </div>
 
-      <button type="submit" class="btn-secondary rounded col-12 my-3">
+      <button type="submit" class="edit-btn btn-secondary rounded col-12 my-3">
         Edit
       </button>
     </form>

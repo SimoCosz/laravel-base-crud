@@ -7,6 +7,14 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-#create{
-  background-color: rgba(#1E1E1E, 0.5);
+.create-btn{
+  background-color: rgba(white, 0.5);
+}
+
+.title{
+  color: white;
+}
+
+table, .show, .edit-form, .create-form{
+  color: white;
 }

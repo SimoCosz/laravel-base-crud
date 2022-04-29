@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('content')
-  <div class="container">
+  <div class="show container">
 
     <img src="{{$comics['thumb']}}" alt="">
     <h3> {{$comics->title}} </h3>

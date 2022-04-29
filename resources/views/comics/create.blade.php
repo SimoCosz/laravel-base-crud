@@ -2,10 +2,10 @@
 
 @section('content')
 <div class="container">
-  <h2>Crea nuovo Comic</h2>
+  <h2 class="title">Crea nuovo Comic</h2>
 </div>
 <div class="container">
-  <form action="{{route('comics.store')}}" method="POST">
+  <form class="create-form" action="{{route('comics.store')}}" method="POST">
     @csrf
 
     <div class="d-flex flex-column mb-2 justify-content-around form-group">

@@ -2,9 +2,9 @@
 
 @section('content')
 <div class="container">
-  <h1 class="text-center">All Comics</h1>
+  <h1 class="title text-center">All Comics</h1>
 </div>
-<main class="container">
+<main class="index container">
   <table class="my-3">
     <th class="px-2">Titolo</th>
     <th class="px-2">Prezzo</th>
@@ -24,7 +24,7 @@
           <form action="{{route('comics.destroy', $comic->id)}}" method='POST'>
               @csrf
               @method('DELETE')
-              <button type='submit' onclick="return confirm('Are you sure?')" class="rounded btn-dark">
+              <button type='submit' onclick="return confirm('Do you want to permanently delete?')" class="rounded btn-dark">
                   Delete
               </button>
           </form>
@@ -32,6 +32,6 @@
       </tr>
     @endforeach
   </table>
-  <a href="{{route('comics.create')}}" id="create" class="btn-secondary p-2 border rounded">Create new Comic</a>
+  <a href="{{route('comics.create')}}"  class="create-btn btn-secondary p-2 border rounded">Create new Comic</a>
 </main>
 @endsection
